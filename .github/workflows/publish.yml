@@ -1,0 +1,25 @@
+name: PUblish to Pre Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  remote-execution:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH Connection
+        uses: appleboy/ssh-action@master
+        with: # 登录远程测试机
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWD }}
+          script: | # 执行远程命令
+            mkdir -p apps
+            cd apps
+            git clone https://github.com/render-ydb/render-components-site.git
+            npm i 
+            npm run build
+            npm run server
