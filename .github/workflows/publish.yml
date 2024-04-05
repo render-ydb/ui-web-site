@@ -21,7 +21,7 @@ jobs:
         run: |
           tar -cvf components.tar \
           --exclude='tsconfig.json' .\
-          --exclude='node_modules' .\
+          --exclude='node_modules' .
           gzip components.tar
 
       - name: Upload deployment package
