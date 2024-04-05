@@ -19,8 +19,9 @@ jobs:
           npm run build
       - name: Build deployment package (excluding node_modules and other directories)
         run: |
-          tar -cvf components.tar.gz \
+          tar -cvf components.tar \
           --exclude='node_modules' .
+          gzip components.tar
 
       - name: Upload deployment package
         uses: appleboy/scp-action@master
