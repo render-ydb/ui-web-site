@@ -20,7 +20,6 @@ jobs:
       - name: Build deployment package (excluding node_modules and other directories)
         run: |
           tar -cvf components.tar \
-          --exclude='tsconfig.json' \
           --exclude='node_modules' .
           gzip components.tar
 
