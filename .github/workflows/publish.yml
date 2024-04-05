@@ -19,7 +19,7 @@ jobs:
           npm run build
       - name: Build deployment package (excluding node_modules and other directories)
         run: |
-          tar -cvf components.tar \
+          tar -cvf components.tar.gz \
           --exclude='node_modules' .
 
       - name: Upload deployment package
@@ -28,5 +28,5 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWD }}
-          source: components.tar
-          target: /path
+          source: components.tar.gz
+          target: /apps/render-components-site
