@@ -1,4 +1,4 @@
-name: PUblish to Pre Server
+name: Deploy components dosc site with PM2
 
 on:
   push:
@@ -6,20 +6,28 @@ on:
       - main
 
 jobs:
-  remote-execution:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup SSH Connection
-        uses: appleboy/ssh-action@master
-        with: # 登录远程测试机
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies and compile project
+        run: |
+          npm ci
+          npm run build
+          - name: Build deployment package (excluding node_modules and other directories)
+          run: |
+            tar -czvf components.tar.gz . \
+              --exclude='./node_modules' \
+              --exclude='package-lock.json'
+
+      - name: Upload deployment package
+        uses: appleboy/scp-action@master
+        with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWD }}
-          script: | # 执行远程命令
-            mkdir -p apps
-            cd apps
-            git clone https://github.com/render-ydb/render-components-site.git
-            npm i 
-            npm run build
-            npm run server
+          source: components.tar.gz
+          target: /apps/render-components-site
