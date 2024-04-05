@@ -29,4 +29,4 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWD }}
           source: components.tar
-          target: /apps/render-components-site/components.tar
+          target: /path
