@@ -44,7 +44,7 @@ jobs:
             mkdir -p /apps/render-components-site
 
             # 切换到部署目录
-            cd /path/to/deployment/
+            cd /apps/render-components-site
 
             # 清理当前目录下所有文件及子目录
             rm -rf ./*
