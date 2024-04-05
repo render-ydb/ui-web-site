@@ -17,9 +17,9 @@ jobs:
         run: |
           npm ci --force
           npm run build
-          - name: Build deployment package (excluding node_modules and other directories)
-          run: |
-            tar -czvf components.tar.gz . \
+      - name: Build deployment package (excluding node_modules and other directories)
+        run: |
+          tar -czvf components.tar.gz . \
               --exclude='./node_modules' \
               --exclude='package-lock.json'
 
