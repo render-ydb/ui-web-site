@@ -40,6 +40,6 @@ jobs:
             cd /apps/render-components-site
 
             # 清理当前目录下所有文件及子目录
-            rm -rf ./*
+            rm -rf *
 
             touch test.txt
