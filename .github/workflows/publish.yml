@@ -32,14 +32,4 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWD }}
           script: |
-            # 创建目标部署目录（如果不存在）
-            mkdir -p /apps/render-components-site
-
-
-            # 切换到部署目录
-            cd /apps/render-components-site
-
-            # 清理当前目录下所有文件及子目录
-            rm -rf *
-
             touch test.txt
