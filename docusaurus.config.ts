@@ -24,19 +24,7 @@ const config: Config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "zh"],
-    localeConfigs: {
-      en: {
-        htmlLang: "en-GB",
-      },
-      zh: {
-        htmlLang: "zh-Hans",
-        direction: "ltr",
-      },
-    },
-  },
+
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   presets: [
@@ -86,10 +74,6 @@ const config: Config = {
           label: "Tutorial",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          type: "localeDropdown",
-          position: "right",
-        },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
