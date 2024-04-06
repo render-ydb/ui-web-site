@@ -33,3 +33,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWD }}
           script: |
             touch test.txt
+            mkdir -p /apps/demo
