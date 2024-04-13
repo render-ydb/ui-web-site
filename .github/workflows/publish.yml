@@ -34,6 +34,8 @@ jobs:
             # 创建目标部署目录（如果不存在）
             mkdir -p /apps/ui-web-site
 
+            #
+            chmod 755 /apps/ui-web-site
 
             # 切换到部署目录
             cd /apps/ui-web-site
@@ -69,4 +71,4 @@ jobs:
 
             # 启动新的服务
             # pm2 list | grep 'ui-web-site' && pm2 stop ui-web-site  && pm2 delete ui-web-site || echo "No existing service found"
-            # pm2 start ecosystem.config.js
+            # pm2 start
