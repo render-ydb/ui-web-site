@@ -70,5 +70,5 @@ jobs:
             rm source.tar.gz
 
             # 启动新的服务
-            # pm2 list | grep 'ui-web-site' && pm2 stop ui-web-site  && pm2 delete ui-web-site || echo "No existing service found"
-            # pm2 start
+            pm2 list | grep 'ui-web-site' && pm2 stop ui-web-site  && pm2 delete ui-web-site || echo "No existing service found"
+            pm2 start ecosystem.config.js
