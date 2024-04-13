@@ -3,7 +3,7 @@ const pm2 = require("pm2");
 async function startUiWebSite() {
   try {
     // List all running processes
-    const processes = await pm2.list();
+    const processes = (await pm2.list()) || [];
 
     // Find the existing 'docusaurus-serve' process (if any)
     const existingProcess = processes.find((p) => p.name === "ui-web-site");
