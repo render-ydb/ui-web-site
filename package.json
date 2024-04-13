@@ -1,6 +1,6 @@
 {
-  "name": "render-components-site",
-  "version": "0.0.0",
+  "name": "ui-web-site",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
