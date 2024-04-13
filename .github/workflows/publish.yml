@@ -68,5 +68,5 @@ jobs:
             rm source.tar.gz
 
             # 启动新的服务
-            pm2 list | grep 'your_app_name' && pm2 stop your_app_name || echo "No existing service found"
-            pm2 start npm --name your_app_name -- run serve
+            pm2 list | grep 'ui-web-site' && pm2 stop ui-web-site || echo "No existing service found"
+            pm2 start npm --name ui-web-site-- run serve
