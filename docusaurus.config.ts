@@ -83,12 +83,14 @@ const config: Config = {
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Usage",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Usage",
+        //   to: "/home",
+        // },
+        { to: "/home", label: "Usage", position: "left" },
         { to: "/blog", label: "changelog", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
