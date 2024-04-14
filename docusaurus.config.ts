@@ -90,7 +90,7 @@ const config: Config = {
         //   label: "Usage",
         //   to: "/home",
         // },
-        { to: "/home", label: "Usage", position: "left" },
+        { to: "/docs/render-ui", label: "Usage", position: "left" },
         { to: "/blog", label: "changelog", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
