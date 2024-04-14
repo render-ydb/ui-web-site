@@ -77,9 +77,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "My Site",
+      title: "Render UI",
       logo: {
-        alt: "My Site Logo",
+        alt: "Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -87,9 +87,9 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Usage",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "changelog", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
@@ -140,7 +140,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Render UI`,
     },
     prism: {
       theme: themes.github,
