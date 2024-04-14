@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "My Site",
-  tagline: "恭喜吴磊，渠成满三家，来自曼哈顿的庆祝🎉",
+  tagline: "1 panel 使用的linxu服务面板",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
