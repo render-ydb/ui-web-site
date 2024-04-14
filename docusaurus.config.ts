@@ -28,7 +28,7 @@ const config: Config = {
     defaultLocale: "zh",
     locales: ["zh"],
     localeConfigs: {
-      en: {
+      zh: {
         htmlLang: "zh-Hans",
       },
     },
