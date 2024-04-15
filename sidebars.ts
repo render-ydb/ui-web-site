@@ -23,6 +23,11 @@ const sidebars: SidebarsConfig = {
       label: "Text 组件",
       items: ["Text/manage-docs-versions", "Text/translate-your-site"],
     },
+    {
+      type: "category",
+      label: "View 组件",
+      items: ["View/1", "View/2", "View/3", "View/4", "View/5"],
+    },
   ],
 };
 
